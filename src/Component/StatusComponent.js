@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import "./StatusComponent.css";
 
 class StatusComponent extends Component {
   state = {
@@ -8,15 +9,14 @@ class StatusComponent extends Component {
     setTimeout(() => {
       const mockResponse = { status: "Active" };
       this.setState({ status: mockResponse.status });
-    }, 1500);
+    }, 1000);
   }
 
   render() {
     return (
-      <div>
+      <div id="Tracker">
         <h1>User Status Tracker</h1>
         <h2> Status:{this.state.status} </h2>
-
       </div>
     );
   }
